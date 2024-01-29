@@ -169,7 +169,7 @@ public class RangeQuery12306 {
     private static synchronized void blockedLock() throws InterruptedException {
         long l1 = atomicLong.get();
         long l;
-        while ((l = System.currentTimeMillis()) - l1 <= 5000) {
+        while ((l = System.currentTimeMillis()) - l1 <= 1200) {
             TimeUnit.MILLISECONDS.sleep(100 + random.nextInt(50));
 //            System.out.println("歇一会");
         }
